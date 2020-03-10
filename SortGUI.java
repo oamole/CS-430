@@ -76,15 +76,13 @@ public class SortGUI extends JPanel {
 
     }
     // Java program for implementation of QuickSort
- void QuickSort(){
-
 	/* This function takes last element as pivot,
 	places the pivot element at its correct
 	position in sorted array, and places all
 	smaller (smaller than pivot) to left of
 	pivot and all greater elements to right
 	of pivot */
-	void partition(int arr[], int low, int high)
+	int partition(int arr[], int low, int high)
 	{
 		int pivot = arr[high];
 		int i = (low-1); // index of smaller element
@@ -129,11 +127,11 @@ public class SortGUI extends JPanel {
 			sort(arr, pi+1, high);
 		}
 	}
-}
+
 
         //Heap Sort Algorithm
-        private void HeapSort ()
-      {
+
+      
            void sort(int arr[])
           {
               int n = arr.length;
@@ -181,7 +179,7 @@ public class SortGUI extends JPanel {
                       heapify(arr, n, largest);
                   }
               }
-            }
+
 
     private class ButtonHandler implements ActionListener {
         public void actionPerformed(final ActionEvent e) {
@@ -190,8 +188,7 @@ public class SortGUI extends JPanel {
                     double quickTime = (AR_SIZE * Math.log(AR_SIZE)) / 1000;
                     double heapTime = (AR_SIZE * AR_SIZE) / 1000;
                     // calling quick and heap
-                    QuickSort();
-                    HeapSort();
+
                     // incrementing their counters to keep track of position in simulation
                     quickTracker++;
                     heapTracker++;
